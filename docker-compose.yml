@@ -1,0 +1,10 @@
+version: '2'
+services:
+  latex:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./docs:/workdir
+    tty: true
+    stdin_open: true
