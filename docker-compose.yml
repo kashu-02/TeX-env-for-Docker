@@ -6,5 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./docs:/workdir
+    command: latexmk -pvc main.tex
+    user: 1000:1000
     tty: true
     stdin_open: true
